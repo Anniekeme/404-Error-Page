@@ -1,0 +1,187 @@
+/* General Reset */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Base Styles */
+
+body {
+    /* background-color: #fee440; */
+    background-color: #f4f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    color: #bbb;
+}
+
+
+/* SVG Background */
+
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    /* Ensure it's behind everything */
+}
+
+
+/* External Link */
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img.icon {
+    display: inline-block;
+    height: 1em;
+    margin: 0 0 -0.1em 0.3em;
+}
+
+
+/* Error Container */
+
+.error-container {
+    text-align: center;
+    font-size: 106px;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 800;
+    margin: 70px 15px;
+}
+
+.error-container>span {
+    display: inline-block;
+    position: relative;
+}
+
+.error-container>span.four {
+    width: 136px;
+    height: 43px;
+    border-radius: 999px;
+    background: linear-gradient( 140deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 43%, transparent 44%, transparent 100%), linear-gradient( 105deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.06) 41%, rgba(0, 0, 0, 0.07) 76%, transparent 77%, transparent 100%), linear-gradient(to right, #d89ca4, #e27b7e);
+}
+
+.error-container>span.four:before,
+.error-container>span.four:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 999px;
+}
+
+.error-container>span.four:before {
+    width: 43px;
+    height: 156px;
+    left: 60px;
+    bottom: -43px;
+    background: linear-gradient( 128deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 40%, transparent 41%, transparent 100%), linear-gradient( 116deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 50%, transparent 51%, transparent 100%), linear-gradient(to top, #99749d, #b895ab, #cc9aa6, #d7969e, #e0787f);
+}
+
+.error-container>span.four:after {
+    width: 137px;
+    height: 43px;
+    transform: rotate(-49.5deg);
+    left: -18px;
+    bottom: 36px;
+    background: linear-gradient( to right, #99749d, #b895ab, #cc9aa6, #d7969e, #e0787f);
+}
+
+.error-container>span.zero {
+    vertical-align: text-top;
+    width: 156px;
+    height: 156px;
+    border-radius: 999px;
+    background: linear-gradient( -45deg, transparent 0%, rgba(0, 0, 0, 0.06) 50%, transparent 51%, transparent 100%), linear-gradient( to top right, #99749d, #99749d, #b895ab, #cc9aa6, #d7969e, #ed8687, #ed8687);
+    overflow: hidden;
+    animation: bgshadow 5s infinite;
+}
+
+.error-container>span.zero:before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    left: 0px;
+    bottom: 0px;
+    background: linear-gradient( 95deg, transparent 0%, transparent 8%, rgba(0, 0, 0, 0.07) 9%, transparent 50%, transparent 100%), linear-gradient( 85deg, transparent 0%, transparent 19%, rgba(0, 0, 0, 0.05) 20%, rgba(0, 0, 0, 0.07) 91%, transparent 92%, transparent 100%);
+}
+
+.error-container>span.zero:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 999px;
+    width: 70px;
+    height: 70px;
+    left: 43px;
+    bottom: 43px;
+    background: #fdfaf5;
+    box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Link Container */
+
+.link-container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.link-container-content h4,
+.link-container-content p {
+    font-weight: 800;
+    font-size: 18px;
+    margin: 12px;
+    padding: 0;
+    text-shadow: -4px 11px 62px rgba(146, 131, 147, 0.7);
+    color: #928393;
+    /* color: #e2aa11ce; */
+}
+
+
+/* Hidden Text for Screen Readers */
+
+.screen-reader-text {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+}
+
+
+/* Background Animation */
+
+@keyframes bgshadow {
+    0% {
+        box-shadow: inset -160px 160px 0px 5px rgba(0, 0, 0, 0.4);
+    }
+    45% {
+        box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+    55% {
+        box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: inset 160px -160px 0px 5px rgba(0, 0, 0, 0.4);
+    }
+}
